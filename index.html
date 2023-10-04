@@ -10,9 +10,9 @@
 <body>
 <!--- Navbar---->
     <nav class="navbar navbar-expand-lg bg-body-tertiary " data-bs-theme="dark">
-        <div class="container-fluid">
+        <div class="container-fluid" style="--bs-gutter-x: 8.5rem">
             <div class="navbar-brand" href="index.html">
-            <img src="/img/codoacodo.png" class="logo-nav" alt="codo a codo" >
+                <img src="/img/codoacodo.png" class="logo-nav" alt="codo a codo" >
             Conf BS AS
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@
                     <a class="nav-link" href="#formulario">Conviértete en orador</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-success boton_ticket" >Comprar tickets</a>
+                    <a class="nav-link text-success boton_ticket" href="./pages/buyTickets.html">Comprar tickets</a>
                 </li>
             </ul>
         </div>
@@ -60,7 +60,7 @@
                         conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel
                         que tenemos para ti. Te esperamos!</p>
                     <button class="btn btn-outline-light fs-4">Quiero ser orador</button>
-                    <button id="btnBuyTickets" class="btn bg-success text-light fs-4 boton_ticket" >Comprar tickets</button>
+                    <button id="btnBuyTickets" class="btn bg-success text-light fs-4 boton_ticket" href="./pages/buyTickets.html" >Comprar tickets</button>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
@@ -196,7 +196,7 @@
         <div class="container">
             <div class="row g-0">
                 <div class="col-md-12  text-center">
-                    <ul class="list-unstyled d-flex justify-content-around align-content-center">
+                    <ul class="list-unstyled d-flex justify-content-around align-content-center flex-wrap flex-sm-wrap flex-md-wrap flex-xl-nowrap py-2">
                         <li class="nav-item"><a href="#"
                                 class="footer_link nav-link text-decoration-none text-wrap">Preguntas
                                 frecuentes</a></li>
