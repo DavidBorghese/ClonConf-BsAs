@@ -1,4 +1,4 @@
-
+//Una arrow function para hacer uso e la funcion validate de bootrstrap en los formularios
     (() => {
         'use strict'
     
@@ -17,6 +17,13 @@
         }, false)
         })
     })()
+
+
+    //Función para usar un link adentro de un boton de bootstrap
+function goBuyTickets() {
+    window.location.href = "./pages/buyTickets.html";
+}
+
 
 function calcTotal() {
     const precio=1000
