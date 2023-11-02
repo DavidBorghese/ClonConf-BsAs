@@ -24,24 +24,39 @@ function goBuyTickets() {
     window.location.href = "./pages/buyTickets.html";
 }
 
+let nodoCantidadTickets = document.getElementById("inputCantidad");
+let cantTickets = 1
+nodoCantidadTickets.addEventListener('change', ()=>{
+    cantTickets = parseInt(nodoCantidadTickets.value);
+});
 
-function calcTotal() {
-    const precio=1000
-    let cant=document.getElementById("cant").value  
+let categoria = document.getElementById("selectCategoria");
+let categoriaSeleccionada = "1";
+categoria.addEventListener('change', ()=>{
+    categoriaSeleccionada = categoria.value;
+});
 
-    if (cant>=1) {
-        let total=cant*precio
+let monto = document.getElementById("resumen");
 
-        let desc=document.getElementById("desc").value 
+let nodoForm = document.getElementById("formulario");
+nodoForm.addEventListener('submit', ()=>{
+    event.preventDefault();
 
-        total=total - (total*desc/100)
-    
-        document.getElementById("total").innerHTML=total     
-        document.getElementById("total").className="text-success border-bottom border-success fs-3 p-1"
-    } else {
-        document.getElementById("total").innerHTML="Debe ingresar una cantidad mayor o igual a 1"
-        document.getElementById("total").className="text-danger border-bottom border-danger fs-5"
+    let totalEntrada;
+    switch ((parseInt(categoriaSeleccionada))) {
+        case 1:
+            totalEntrada = (cantTickets * 200) * 0.2;
+            break;
+        case 2:
+            totalEntrada = (cantTickets * 200) * 0.5;
+            break;
+        case 3:
+            totalEntrada = (cantTickets * 200) * 0.85;
+            break;
     }
-    
+    monto.innerHTML = `Total a Pagar:  ${totalEntrada} $`;
+    console.log(totalEntrada)
+})
 
-}
+
+
