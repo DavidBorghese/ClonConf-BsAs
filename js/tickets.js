@@ -58,5 +58,7 @@ nodoForm.addEventListener('submit', ()=>{
     console.log(totalEntrada)
 })
 
-
+function cambiaSelect(valor) {
+    categoria.value=valor
+}
 
